@@ -33,6 +33,33 @@ const App = () => (
 When compontent did mount it will set the scroll position.
 When component will unmount it will store the scroll position.
 
+If we have a more real example with `react-router`:
+
+```javascript
+const App = () => (
+  <div>
+    <Route match="long-container">
+      <div className="really-long-container">
+        <RestoreScrollOnMount />
+        Best content
+
+        <Link to="short-container" />
+      </div>
+    </Route>
+
+    <Route match="short-container">
+      <div className="really-short-container">
+        Cool content
+
+        <Link to="long-container" />
+      </div>
+    </Route>
+  </div>
+);
+```
+
+When we visit `/long-container` the scroll position will be set when we unmount. We then visit `/short-container`, and then come back to `/long-container`. The scroll position that we were at when we left initially will now be set again.
+
 ### React Story Book
 
 To run the component in various modes, run the following command then go to `http://localhost:6006/`.
