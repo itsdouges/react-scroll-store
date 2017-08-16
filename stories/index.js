@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { storiesOf } from '@kadira/storybook';
-import Component from '../src/Component';
+import createScrollStore from '../src';
 
-import '../src/style.less';
+const RestoreScrollOnMount = createScrollStore();
 
 storiesOf('Component')
-  .add('default', () => <Component initialCount={2} />);
+  .add('default', () => <div><RestoreScrollOnMount /></div>);
