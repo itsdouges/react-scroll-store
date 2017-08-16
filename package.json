@@ -1,7 +1,7 @@
 {
   "name": "react-scroll-store",
   "version": "0.0.0",
-  "description": "Project description.",
+  "description": "Stores scroll position on unmount and sets it back when the component is re-mounted.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/madou/react-scroll-store.git"
